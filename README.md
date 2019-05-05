@@ -7,3 +7,8 @@ Just a simple test...
 * testing...
 * 1 2 3
 
+## fizzbuzz
+
+* python -m unittest
+* python -m unittest -v
+
