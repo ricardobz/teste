@@ -6,16 +6,22 @@ Regras do jogo Fizzbuzz
 4. Para todos os outros dizer o número
 """
 
-def robot(pos):
-    if pos % 3 == 0 and pos % 5 == 0:
-        return 'fizzbuzz'
-    if pos % 5 == 0:
-        return 'buzz'
-    
-    if pos % 3 == 0:
-        return 'fizz'
+def multiple_of(base, num):
+    return num % base ==0
 
-    return str(pos)
+
+def robot(pos):
+    say = str(pos)
+
+    if multiple_of(3, pos) and multiple_of(5, pos):
+        say = 'fizzbuzz'
+    elif multiple_of(5, pos):
+        say = 'buzz'
+    elif multiple_of(3, pos):
+        say = 'fizz'
+
+    return say
+
     
 if __name__ == '__main__':
     assert robot(1) == '1'
